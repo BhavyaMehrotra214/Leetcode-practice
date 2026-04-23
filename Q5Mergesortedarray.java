@@ -1,8 +1,6 @@
 import java.util.*;
 
-class Solution {
-
-    // Merge function (made static so no object needed)
+class Q5Mergesortedarray {
     public static void merge(int[] nums1, int m, int[] nums2, int n) {
         int i = m - 1;
         int j = n - 1;
@@ -24,18 +22,16 @@ class Solution {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        // Input m
-        System.out.print("Enter m: ");
-        int m = sc.nextInt();
+        System.out.print("Enter o: ");
+        int o = sc.nextInt();
 
-        int[] nums1 = new int[m + 100]; // extra space
+        int[] nums1 = new int[o + 100]; 
 
         System.out.println("Enter elements of nums1:");
-        for (int i = 0; i < m; i++) {
+        for (int i = 0; i < o; i++) {
             nums1[i] = sc.nextInt();
         }
 
-        // Input n
         System.out.print("Enter n: ");
         int n = sc.nextInt();
 
@@ -46,12 +42,10 @@ class Solution {
             nums2[i] = sc.nextInt();
         }
 
-        // Call merge
-        merge(nums1, m, nums2, n);
+        merge(nums1, o, nums2, n);
 
-        // Output result
         System.out.println("Merged Array:");
-        for (int i = 0; i < m + n; i++) {
+        for (int i = 0; i < o + n; i++) {
             System.out.print(nums1[i] + " ");
         }
 
